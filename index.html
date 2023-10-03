@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emoji Translator</title>
+        <link href="./emoji.png" rel="shortcut icon" type="image/jpg"/>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <input type="text" id="translator-input">
+        <button id="submit-button">Submit</button>
+        <p>How would you like to translate?</p>
+        <p><a href="#" class="crouchingTiger">Click for help</a></p>
+        <ul class="hiddenDragon">
+            <li>"Encode" returns the corresponding emoji for each letter you type. (Example: "ac" returns the alien and cactus emojis.)</li>
+            <li>"Translate" produces an emoji when you type its full name. (Example: "alien" returns the alien emoji.)</li>
+            <li>"Madlib" returns a random emoji of the class you type. (Example:"face" returns a random face emoji.)</li>
+            <li>"Search" returns all emojis whose names contain the letters you type. (Example: "ba" returns the baby and banana emojis.)</li>
+            <li>"Random" randomly applies one of the other functions (Encode, Translate, Madlib, or Search) to your input.</li>
+        </ul>
+        <form>
+            
+            <div class="radio-button-section">
+                <input type="radio" name="translation-section" class="translation-section radio-button" value="encode" id="encode" checked>
+                <label for="encode">Encode</label>
+            </div>
+            <div class="radio-button-section">
+                <input type="radio" name="translation-section" value="translate" class="translation-section radio-button" id="translate">
+                <label for="translate">Translate</label>
+            </div>
+            <div class="radio-button-section">
+                <input type="radio" name="translation-section" value="madlib" class="translation-section radio-button" id="madlib">
+                <label for="madlib">Madlib</label>
+            </div>
+            <div class="radio-button-section">
+                <input type="radio" name="translation-section" value="search" class="translation-section radio-button" id="search">
+                <label for="search">Search</label>
+            </div>
+            <div class="radio-button-section">
+                <input type="radio" name="translation-section" value="random" class="translation-section radio-button" id="random">
+                <label for="random">Random</label>
+            </div>
+        </form>
+
+        <h1 id="results">&nbsp;</h1>
+
+        <script src="./emojis.js"></script>
+        <script src="./encode.js"></script>
+        <script src="./random-element.js"></script>
+        <script src="./get-category.js"></script>
+        <script src="./translate.js"></script>
+        <script src="./madlib.js"></script>
+        <script src="./search.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
